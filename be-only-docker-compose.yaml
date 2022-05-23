@@ -1,33 +1,14 @@
 version: "3.7"
 services:
 
-  # app:
-  #   build:
-  #     context: .
-  #     dockerfile: Dockerfile-app
-  #   networks:
-  #     onprem-db-zone:
-  #     onprem-office-lan:
-      
-
-  # proxy-mssql-frontend:
-  #   build:
-  #     context: .
-  #     dockerfile: Dockerfile-proxy-frontend
-  #   networks:
-  #     onprem-db-zone:
-  #       aliases:
-  #       - sqlserver
-  #     public-network:
-
   proxy-mssql-backend:
     build:
       context: .
-      dockerfile: Dockerfile-proxy-backend-no-tls
+      dockerfile: Dockerfile-proxy-backend
     networks:
       cloud-private:
     ports:
-    - "1433:1433"
+    - "443:443"
 
 
   sqlserver:
