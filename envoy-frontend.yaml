@@ -23,7 +23,7 @@ static_resources:
         - endpoint:
             address:
               socket_address:
-                address: 13.38.126.47
+                address: 192.168.1.7
                 port_value: 443
     transport_socket:
       name: envoy.transport_sockets.tls

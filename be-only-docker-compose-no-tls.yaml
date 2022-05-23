@@ -12,7 +12,7 @@ services:
 
 
   sqlserver:
-    image: mcr.microsoft.com/mssql/server:2019-latest
+    image: justin2004/mssql_server_tiny
     environment:
       - ACCEPT_EULA=Y
       - SA_PASSWORD=mssql1Ipw

@@ -15,7 +15,7 @@ static_resources:
 
   clusters:
   - name: sqlserver_cluster
-    type: STRICT_DNS
+    type: STATIC
     load_assignment:
       cluster_name: sqlserver_cluster
       endpoints:
@@ -23,5 +23,5 @@ static_resources:
         - endpoint:
             address:
               socket_address:
-                address: 13.38.126.47
+                address: 192.168.1.7
                 port_value: 443
