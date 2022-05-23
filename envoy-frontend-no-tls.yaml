@@ -25,20 +25,3 @@ static_resources:
               socket_address:
                 address: 13.38.126.47
                 port_value: 443
-    transport_socket:
-      name: envoy.transport_sockets.tls
-      typed_config:
-        "@type": type.googleapis.com/envoy.extensions.transport_sockets.tls.v3.UpstreamTlsContext
-        common_tls_context:
-          tls_certificates:
-          - certificate_chain:
-              filename: certs/clientcert.pem
-            private_key:
-              filename: certs/clientkey.pem
-          validation_context:
-            match_typed_subject_alt_names:
-            - san_type: DNS
-              matcher:
-                exact: proxy-sqlserver-backend.mydomain.com
-            trusted_ca:
-              filename: certs/cacert.pem

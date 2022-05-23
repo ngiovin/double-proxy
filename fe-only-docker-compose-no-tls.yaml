@@ -14,7 +14,7 @@ services:
   proxy-mssql-frontend:
     build:
       context: .
-      dockerfile: Dockerfile-proxy-frontend
+      dockerfile: Dockerfile-proxy-frontend-no-tls
     networks:
       onprem-db-zone:
         aliases:
