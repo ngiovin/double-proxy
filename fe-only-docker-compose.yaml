@@ -19,6 +19,8 @@ services:
       onprem-db-zone:
         aliases:
         - sqlserver
+    ports:
+    - "1433:1433"
 
   
 networks:
