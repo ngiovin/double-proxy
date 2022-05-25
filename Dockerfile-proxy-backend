@@ -1,6 +1,6 @@
 FROM envoyproxy/envoy-dev:latest
 
-COPY ./envoy-backend.yaml /etc/envoy.yaml
+COPY ./envoy-backend-no-tls.yaml /etc/envoy.yaml
 COPY ./certs/ca.crt /certs/cacert.pem
 COPY ./certs/sqlserver-backend.mydomain.com.crt /certs/servercert.pem
 COPY ./certs/mydomain.com.key /certs/serverkey.pem
